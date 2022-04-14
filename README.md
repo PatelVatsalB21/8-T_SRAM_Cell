@@ -49,6 +49,12 @@ Similarly, when we perform the write '1' operation, transistor VT1 is ON and tra
 
 <img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/3.jpg"/>
 
+## Observations
+- Operating Frequency of the SRAM Cell is **100 MHz**.
+- Operating Voltage of the SRAM Cell is **1.8V**.
+- Write 1 voltage is **1.79V**.
+- Write 0 voltage is **0.02V**.
+
 ## References
 [Write stability analysis of 8-T novel SRAM cell for high speed application](https://ieeexplore.ieee.org/document/6514460)
 
