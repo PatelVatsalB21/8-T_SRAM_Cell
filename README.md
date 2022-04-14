@@ -26,3 +26,7 @@ During the write '0' operation, the bit line goes low and the bit bar line goes 
 **B. Write '1' operation** 
 
 Similarly, when we perform the write '1' operation, transistor VT1 is ON and transistor VT2 goes to the OFF condition, so the voltage source VS1 decreases the voltage swing at the bit line output. Due to the decrease in voltage swing, dynamic power dissipation is almost constant even if we increase the frequency of the SRAM cell. In this SRAM model, voltage sources VSI and VS2 decrease the voltage swing during switching activity. With the increase in frequency, the switching will also increase, but the voltage source decreases its voltage swing simultaneously at the output. So at a higher frequency, the dynamic power dissipation is almost constant. These two voltage sources also provide extra voltage during the write operations on the bit line, bit bar line and word line. This extra voltage will provide a better noise margin on the bit line and word line during write operations.
+
+## Schematic
+
+<img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/schematic.jpg"/>
