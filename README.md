@@ -55,6 +55,10 @@ Similarly, when we perform the write '1' operation, transistor VT1 is ON and tra
 - Write 1 voltage is **1.79V**.
 - Write 0 voltage is **0.02V**.
 
+## Limitations
+- Frequency of the SRAM Cell cannot be increased much higher as it results it more dynamic power dissipation, uneven duty cycle and low write voltages.
+- Area of the circuit cannot be reduced further.
+
 ## References
 [Write stability analysis of 8-T novel SRAM cell for high speed application](https://ieeexplore.ieee.org/document/6514460)
 
