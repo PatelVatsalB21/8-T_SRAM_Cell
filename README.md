@@ -30,3 +30,25 @@ Similarly, when we perform the write '1' operation, transistor VT1 is ON and tra
 ## Schematic
 
 <img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/schematic.jpg"/>
+
+## Simulation Results
+
+**20ns Combined Signals**
+
+<img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/1.jpg"/>
+
+**100ns Combined Signals**
+
+<img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/2.jpg"/>
+
+**20ns Output Signal**
+
+<img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/4.jpg"/>
+
+**100ns Output Signal**
+
+<img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/3.jpg"/>
+
+
+
+
