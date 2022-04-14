@@ -1,0 +1,28 @@
+* C:\Users\Vatsal\eSim-Workspace\8T_SRAM\8T_SRAM.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 04/14/22 15:46:28
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+M5  GND WrittenBit Net-_M3-Pad2_ GND mosfet_n		
+M3  Net-_M3-Pad1_ Net-_M3-Pad2_ WrittenBit Net-_M3-Pad1_ mosfet_p		
+M7  Net-_M3-Pad2_ WriteEnable BitBar GND mosfet_n		
+M8  Net-_M3-Pad2_ BitBar Net-_M8-Pad3_ GND mosfet_n		
+M4  GND Net-_M3-Pad2_ WrittenBit GND mosfet_n		
+M1  WrittenBit BitLine Net-_M1-Pad3_ GND mosfet_n		
+M2  WrittenBit WriteEnable BitLine GND mosfet_n		
+M6  Net-_M3-Pad1_ WrittenBit Net-_M3-Pad2_ Net-_M3-Pad1_ mosfet_p		
+v5  Net-_M8-Pad3_ GND 1.8		
+v2  WriteEnable GND 1.8		
+v4  Net-_M3-Pad1_ GND 1.8		
+v3  Net-_M1-Pad3_ GND 1.8		
+U1  WrittenBit plot_v1		
+U3  WriteEnable plot_v1		
+U2  BitLine plot_v1		
+U4  BitBar plot_v1		
+v1  BitLine GND pulse		
+v6  BitBar GND pulse		
+
+.end
