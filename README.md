@@ -9,6 +9,7 @@ This repository presents the design of 8-T SRAM Cell implemented using eSim and 
 - [Simulation Results](#simulation-results)
 - [Observations](#observations)
 - [Limitations](#limitations)
+- [Steps to run this project](#steps-to-run-this-project)
 - [References](#references)
 - [Author](#author)
 
@@ -138,6 +139,21 @@ plot v(bitbar)
 ## Limitations
 - Frequency of the SRAM Cell cannot be increased much higher as it results it more dynamic power dissipation, uneven duty cycle and low write voltages.
 - Area of the circuit cannot be reduced further.
+
+## Steps to run this project
+1. Open a new terminal
+2. Clone this project using the following command:</br>
+```git clone https://github.com/PatelVatsalB21/8-T_SRAM_Cell.git ```</br>
+3. Change directory:</br>
+```cd Project Files```</br>
+4. Run ngspice:</br>
+```ngspice SKY130_8T_SRAM.cir```</br>
+5. To run the project in eSim:
+
+  - Run eSim</br>
+  - Load the project</br>
+  - Open eeSchema</br>
+
 
 ## References
 [Write stability analysis of 8-T novel SRAM cell for high speed application](https://ieeexplore.ieee.org/document/6514460)
