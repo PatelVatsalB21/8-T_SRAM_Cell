@@ -52,4 +52,6 @@ Similarly, when we perform the write '1' operation, transistor VT1 is ON and tra
 ## References
 [Write stability analysis of 8-T novel SRAM cell for high speed application](https://ieeexplore.ieee.org/document/6514460)
 
+## Author
+- [Vatsal Patel](https://github.com/patelvatsalb21), Bachelor of Technology in Electronics and Communication Engineering, VGEC
 
