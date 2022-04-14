@@ -10,6 +10,10 @@ This repository presents the design of 8-T SRAM Cell implemented using eSim and 
 - [Observations](#observations)
 - [Limitations](#limitations)
 - [Steps to run this project](#steps-to-run-this-project)
+- [Software Used](#software-used)
+  * [eSim](#esim)
+  * [NgSpice](#ngspice)
+  * [SKY130 PDK](#sky130-pdk)
 - [References](#references)
 - [Author](#author)
 
@@ -154,6 +158,20 @@ plot v(bitbar)
   - Load the project</br>
   - Open eeSchema</br>
 
+## Software Used
+### eSim
+It is an Open Source EDA developed by FOSSEE, IIT Bombay. It is used for electronic circuit simulation. It is made by the combination of two software namely NgSpice and KiCAD.
+</br>
+For more details refer:
+</br>
+https://esim.fossee.in/home
+### NgSpice
+It is an Open Source Software for Spice Simulations. For more details refer:
+</br>
+http://ngspice.sourceforge.net/docs.html
+### SKY130 PDK
+The SkyWater Open Source PDK is a collaboration between Google and SkyWater Technology Foundry to provide a fully open source Process Design Kit and related resources, which can be used to create manufacturable designs at SkyWater’s facility. Refer
+</br> https://github.com/google/skywater-pdk
 
 ## References
 [Write stability analysis of 8-T novel SRAM cell for high speed application](https://ieeexplore.ieee.org/document/6514460)
