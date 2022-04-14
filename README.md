@@ -5,6 +5,7 @@ This repository presents the design of 8-T SRAM Cell implemented using eSim and 
 - [Abstract](#abstract)
 - [8-T SRAM Cell Working](#8-t-sram-cell-working)
 - [Schematic](#schematic)
+- [Netlist](#netlist)
 - [Simulation Results](#simulation-results)
 - [Observations](#observations)
 - [Limitations](#limitations)
@@ -48,6 +49,85 @@ Similarly, when we perform the write '1' operation, transistor VT1 is ON and tra
 **100ns Output Signal**
 
 <img src="https://github.com/PatelVatsalB21/8-T_SRAM_Cell/blob/main/Images/3.jpg"/>
+
+## Netlist
+### SKY130 Netlist
+```
+* c:\users\vatsal\8t_sram.cir
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt 
+
+
+xm5 gnd writtenbit net-_m3-pad2_ gnd sky130_fd_pr__nfet_01v8
+xm3 net-_m3-pad1_ net-_m3-pad2_ writtenbit net-_m3-pad1_ sky130_fd_pr__pfet_01v8
+xm7 net-_m3-pad2_ writeenable bitbar gnd sky130_fd_pr__nfet_01v8
+xm8 net-_m3-pad2_ bitbar net-_m8-pad3_ gnd sky130_fd_pr__nfet_01v8
+xm4 gnd net-_m3-pad2_ writtenbit gnd sky130_fd_pr__nfet_01v8
+xm1 writtenbit bitline net-_m1-pad3_ gnd sky130_fd_pr__nfet_01v8
+xm2 writtenbit writeenable bitline gnd sky130_fd_pr__nfet_01v8
+xm6 net-_m3-pad1_ writtenbit net-_m3-pad2_ net-_m3-pad1_ sky130_fd_pr__pfet_01v8
+v5  net-_m8-pad3_ gnd 1.8
+v2  writeenable gnd 1.8
+v4  net-_m3-pad1_ gnd 1.8
+v3  net-_m1-pad3_ gnd 1.8
+* u1  writtenbit plot_v1
+* u3  writeenable plot_v1
+* u2  bitline plot_v1
+* u4  bitbar plot_v1
+v1  bitline gnd pulse(0v 1.8v 0u 0u 0u 10n 20n)
+v6  bitbar gnd pulse(1.8v 0v 0u 0u 0u 10n 20n)
+.tran 250e-12 20e-09 0e-06
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(writtenbit)
+plot v(writeenable)
+plot v(bitline)
+plot v(bitbar)
+.endc
+.end
+```
+
+### ESim Netlist
+```
+* c:\users\vatsal\esim-workspace\8t_sram\8t_sram.cir
+
+.include PMOS-180nm.lib
+.include NMOS-180nm.lib
+m5 gnd writtenbit net-_m3-pad2_ gnd CMOSN W=100u L=100u M=1
+m3 net-_m3-pad1_ net-_m3-pad2_ writtenbit net-_m3-pad1_ CMOSP W=100u L=100u M=1
+m7 net-_m3-pad2_ writeenable bitbar gnd CMOSN W=100u L=100u M=1
+m8 net-_m3-pad2_ bitbar net-_m8-pad3_ gnd CMOSN W=100u L=100u M=1
+m4 gnd net-_m3-pad2_ writtenbit gnd CMOSN W=100u L=100u M=1
+m1 writtenbit bitline net-_m1-pad3_ gnd CMOSN W=100u L=100u M=1
+m2 writtenbit writeenable bitline gnd CMOSN W=100u L=100u M=1
+m6 net-_m3-pad1_ writtenbit net-_m3-pad2_ net-_m3-pad1_ CMOSP W=100u L=100u M=1
+v5  net-_m8-pad3_ gnd 1.8
+v2  writeenable gnd 1.8
+v4  net-_m3-pad1_ gnd 1.8
+v3  net-_m1-pad3_ gnd 1.8
+* u1  writtenbit plot_v1
+* u3  writeenable plot_v1
+* u2  bitline plot_v1
+* u4  bitbar plot_v1
+v1  bitline gnd pulse(0 1.8 0 0 0 10n 20n)
+v6  bitbar gnd pulse(1.8 0 0 0 0 10n 20n)
+.tran 250e-12 20e-09 0e-06
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(writtenbit)
+plot v(writeenable)
+plot v(bitline)
+plot v(bitbar)
+.endc
+.end
+```
 
 ## Observations
 - Operating Frequency of the SRAM Cell is **100 MHz**.
